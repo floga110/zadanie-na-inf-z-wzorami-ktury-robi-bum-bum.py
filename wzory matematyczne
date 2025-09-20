@@ -1,0 +1,166 @@
+import math
+PI = math.pi
+print("1 = Pole powierzchni szescianu 2 = Objetosc szescianu 3 = Pole powierzchni prostopadloscianu 4 = Objetosc prostopadloscianu 5 = Pole powierzchni graniastoslupa 6 = Objetosc graniastoslupa 7 = Pole powierzchni ostroslupa 8 = Objetosc ostroslupa 9 = Pole powierzchni walca 10 = Objetosc walca 11 = Pole powierzchni stozka 12 = Objetosc stozka 13 = Pole powierzchni kuli 14 = Objetosc kuli 15 = Obwod kwadratu 16 = Obwod prostokata 17 = Obwod rownolegloboku 18 = Obwod trapezu 19 = Obwod trojkata 20 = Obwod trojkata rownobocznego 21 = Obwod kola 22 = Obwod rombu 23 = Pole kwadratu 24 = Pole prostokata 25 = Pole rownolegloboku 26 = Pole trapezu 27 = Pole trojkata 28 = Pole trojkata rownobocznego 29 = Pole kola 30 = Pole rombu 31 = Wysokosc trojkata rownobocznego 32 = Przekatna kwadratu 33 = Twierdzenie Pitagorasa")
+if True:
+    wybor = int(input("Wybierz numer wzoru ktory chcesz uzyc: "))
+    if wybor == 1:
+        a = float(input("Podaj dlugosc krawedzi szescianu: "))
+        pole_szescianu = 6 * a ** 2
+        print("Pole powierzchni szescianu wynosi:", pole_szescianu)
+    elif wybor == 2:
+        a = float(input("Podaj dlugosc krawedzi szescianu: "))
+        objetosc_szescianu = a ** 3
+        print("Objetosc szescianu wynosi:", objetosc_szescianu)
+    elif wybor == 3:
+        a = float(input("Podaj dlugosc pierwszej krawedzi prostopadloscianu: "))
+        b = float(input("Podaj dlugosc drugiej krawedzi prostopadloscianu: "))
+        c = float(input("Podaj dlugosc trzeciej krawedzi prostopadloscianu: "))
+        pole_prostopadloscianu = 2 * (a * b + a * c + b * c)
+        print("Pole powierzchni prostopadloscianu wynosi:", pole_prostopadloscianu)
+    elif wybor == 4:
+        a = float(input("Podaj dlugosc pierwszej krawedzi prostopadloscianu: "))
+        b = float(input("Podaj dlugosc drugiej krawedzi prostopadloscianu: "))
+        c = float(input("Podaj dlugosc trzeciej krawedzi prostopadloscianu: "))
+        objetosc_prostopadloscianu = a * b * c
+        print("Objetosc prostopadloscianu wynosi:", objetosc_prostopadloscianu)
+    elif wybor == 5:
+        p = float(input("Podaj obwod podstawy graniastoslupa: "))
+        h = float(input("Podaj wysokosc graniastoslupa: "))
+        pole_podstawy = float(input("Podaj pole podstawy graniastoslupa: "))
+        pole_graniastoslupa = 2 * pole_podstawy + p * h
+        print("Pole powierzchni graniastoslupa wynosi:", pole_graniastoslupa)
+    elif wybor == 6:
+        pole_podstawy = float(input("Podaj pole podstawy graniastoslupa: "))
+        h = float(input("Podaj wysokosc graniastoslupa: "))
+        objetosc_graniastoslupa = pole_podstawy * h
+        print("Objetosc graniastoslupa wynosi:", objetosc_graniastoslupa)
+    elif wybor == 7:
+        pole_podstawy = float(input("Podaj pole podstawy ostroslupa: "))
+        p = float(input("Podaj obwod podstawy ostroslupa: "))
+        l = float(input("Podaj apoteme ostroslupa: "))
+        pole_ostroslupa = pole_podstawy + (p * l) / 2
+        print("Pole powierzchni ostroslupa wynosi:", pole_ostroslupa)
+    elif wybor == 8:
+        pole_podstawy = float(input("Podaj pole podstawy ostroslupa: "))
+        h = float(input("Podaj wysokosc ostroslupa: "))
+        objetosc_ostroslupa = (pole_podstawy * h) / 3
+        print("Objetosc ostroslupa wynosi:", objetosc_ostroslupa)
+    elif wybor == 9:
+        r = float(input("Podaj promien podstawy walca: "))
+        h = float(input("Podaj wysokosc walca: "))
+        pole_walca = 2 * PI * r ** 2 + 2 * PI * r * h
+        print("Pole powierzchni walca wynosi:", pole_walca)
+    elif wybor == 10:
+        r = float(input("Podaj promien podstawy walca: "))
+        h = float(input("Podaj wysokosc walca: "))
+        objetosc_walca = PI * r ** 2 * h
+        print("Objetosc walca wynosi:", objetosc_walca)
+    elif wybor == 11:
+        r = float(input("Podaj promien podstawy stozka: "))
+        l = float(input("Podaj apoteme stozka: "))
+        pole_stozka = PI * r ** 2 + PI * r * l
+        print("Pole powierzchni stozka wynosi:", pole_stozka)
+    elif wybor == 12:
+        r = float(input("Podaj promien podstawy stozka: "))
+        h = float(input("Podaj wysokosc stozka: "))
+        objetosc_stozka = (PI * r ** 2 * h) / 3
+        print("Objetosc stozka wynosi:", objetosc_stozka)
+    elif wybor == 13:
+        r = float(input("Podaj promien kuli: "))
+        pole_kuli = 4 * PI * r ** 2
+        print("Pole powierzchni kuli wynosi:", pole_kuli)
+    elif wybor == 14:
+        r = float(input("Podaj promien kuli: "))
+        objetosc_kuli = (4/3) * PI * r ** 3
+        print("Objetosc kuli wynosi:", objetosc_kuli)
+    elif wybor == 15:
+        a = float(input("Podaj dlugosc boku kwadratu: "))
+        obwod_kwadratu = 4 * a
+        print("Obwod kwadratu wynosi:", obwod_kwadratu)
+    elif wybor == 16:
+        a = float(input("Podaj dlugosc pierwszego boku prostokata: "))
+        b = float(input("Podaj dlugosc drugiego boku prostokata: "))
+        obwod_prostokata = 2 * (a + b)
+        print("Obwod prostokata wynosi:", obwod_prostokata)
+    elif wybor == 17: 
+        a = float(input("Podaj dlugosc pierwszego boku rownolegloboku: "))
+        b = float(input("Podaj dlugosc drugiego boku rownolegloboku: "))
+        obwod_rownolegloboku = 2 * (a + b)
+        print("Obwod rownolegloboku wynosi:", obwod_rownolegloboku)
+    elif wybor == 18:
+        a = float(input("Podaj dlugosc pierwszego boku trapezu: "))
+        b = float(input("Podaj dlugosc drugiego boku trapezu: "))
+        c = float(input("Podaj dlugosc trzeciego boku trapezu: "))
+        d = float(input("Podaj dlugosc czwartego boku trapezu: "))
+        obwod_trapezu = a + b + c + d
+        print("Obwod trapezu wynosi:", obwod_trapezu)
+    elif wybor == 19:
+        a = float(input("Podaj dlugosc pierwszego boku trojkata: "))
+        b = float(input("Podaj dlugosc drugiego boku trojkata: "))
+        c = float(input("Podaj dlugosc trzeciego boku trojkata: "))
+        obwod_trojkata = a + b + c
+        print("Obwod trojkata wynosi:", obwod_trojkata)
+    elif wybor == 20:
+        a = float(input("Podaj dlugosc boku trojkata rownobocznego: "))
+        obwod_trojkata_rownobocznego = 3 * a
+        print("Obwod trojkata rownobocznego wynosi:", obwod_trojkata_rownobocznego)
+    elif wybor == 21:
+        r = float(input("Podaj promien kola: "))
+        obwod_kola = 2 * PI * r
+        print("Obwod kola wynosi:", obwod_kola)
+    elif wybor == 22:
+        a = float(input("Podaj dlugosc boku rombu: "))
+        obwod_rombu = 4 * a
+        print("Obwod rombu wynosi:", obwod_rombu)
+    elif wybor == 23:
+        a = float(input("Podaj dlugosc boku kwadratu: "))
+        pole_kwadratu = a ** 2
+        print("Pole kwadratu wynosi:", pole_kwadratu)
+    elif wybor == 24:
+        a = float(input("Podaj dlugosc pierwszego boku prostokata: "))
+        b = float(input("Podaj dlugosc drugiego boku prostokata: "))
+        pole_prostokata = a * b
+        print("Pole prostokata wynosi:", pole_prostokata)
+    elif wybor == 25:
+        a = float(input("Podaj dlugosc podstawy rownolegloboku: "))
+        h = float(input("Podaj wysokosc rownolegloboku: "))
+        pole_rownolegloboku = a * h
+        print("Pole rownolegloboku wynosi:", pole_rownolegloboku)
+    elif wybor == 26:
+        a = float(input("Podaj dlugosc pierwszej podstawy trapezu: "))
+        b = float(input("Podaj dlugosc drugiej podstawy trapezu: "))
+        h = float(input("Podaj wysokosc trapezu: "))
+        pole_trapezu = ((a + b) / 2) * h
+        print("Pole trapezu wynosi:", pole_trapezu)
+    elif wybor == 27:
+        a = float(input("Podaj dlugosc podstawy trojkata: "))
+        h = float(input("Podaj wysokosc trojkata: "))
+        pole_trojkata = (a * h) / 2
+        print("Pole trojkata wynosi:", pole_trojkata)
+    elif wybor == 28:
+        a = float(input("Podaj dlugosc boku trojkata rownobocznego: "))
+        pole_trojkata_rownobocznego = (math.sqrt(3) / 4) * a ** 2
+        print("Pole trojkata rownobocznego wynosi:", pole_trojkata_rownobocznego)
+    elif wybor == 29:
+        r = float(input("Podaj promien kola: "))
+        pole_kola = PI * r ** 2
+        print("Pole kola wynosi:", pole_kola)
+    elif wybor == 30:
+        a = float(input("Podaj dlugosc boku rombu: "))
+        h = float(input("Podaj wysokosc rombu: "))
+        pole_rombu = a * h
+        print("Pole rombu wynosi:", pole_rombu)
+    elif wybor == 31:
+        a = float(input("Podaj dlugosc boku trojkata rownobocznego: "))
+        wysokosc_trojkata_rownobocznego = (math.sqrt(3) / 2) * a
+        print("Wysokosc trojkata rownobocznego wynosi:", wysokosc_trojkata_rownobocznego)
+    elif wybor == 32:
+        a = float(input("Podaj dlugosc boku kwadratu: "))
+        przekatna_kwadratu = a * math.sqrt(2)
+        print("Przekatna kwadratu wynosi:", przekatna_kwadratu)
+    elif wybor == 33:
+        a = float(input("Podaj dlugosc pierwszego przyprostokatnego: "))
+        b = float(input("Podaj dlugosc drugiego przyprostokatnego: "))
+        c = math.sqrt(a ** 2 + b ** 2)
+        print("Dlugosc przeciwprostokatnej wynosi:", c)
+else: print("Nieprawidlowy wybor.")
